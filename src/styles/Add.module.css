@@ -1,0 +1,87 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(217, 217, 217, 0.568);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+    width: 500px;
+    background-color: white;
+    padding: 10px 50px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+.close{
+    width: 30px;
+    height: 30px;
+    background-color: rgba(233, 108, 129, 0.995);
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top:-10px;
+    right:-10px;
+}
+.item{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+}
+.label{
+    margin-bottom: 5px;
+    font-style: 14px;
+    font-weight: 500;
+}
+.input{
+    border:none;
+    border-bottom: 1px solid gray;
+    outline:none;
+}
+.priceContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.topping{
+    display: flex;
+    justify-content: space-between;
+}
+.toppingItems{
+    margin: 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.toppingItem{
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid rgb(233, 108, 129);
+    background-color: white;
+    color: rgb(233, 108, 129);
+    margin-right: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.addButton{
+    padding: 5px 0;
+    background-color: rgb(233, 108, 129);
+    width: 25%;
+    border:none;
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+    align-self: flex-end;
+}

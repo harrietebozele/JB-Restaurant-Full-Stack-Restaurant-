@@ -1,0 +1,53 @@
+.container{
+    height: calc(100vh - 100px);
+    background-color: #db7f8e;
+background-image: linear-gradient(315deg, #db7f8e 0%, #7b0d1e 74%);
+    display: flex;
+
+}
+.item{
+    flex: 2;
+    position: relative;
+    display: flex;
+}
+.item:last-child{
+    justify-content: 50px;
+    flex: 3;
+    padding:50px;
+}
+.card{
+    flex: 1;
+    padding: 0 20px;
+}
+
+.title{
+    font-size: 18px;
+    color: gold;
+
+}
+.text{
+    color: rgb(46, 51, 11);
+}
+.motto {
+    color: #db7f8e;
+}
+
+@media screen and (max-width:480px){
+    .container{
+        height: auto;
+        text-align: center;
+        position: relative;
+    }
+    .item:first-child{
+        display: none;
+    }
+    .item{
+        flex-direction: column;
+    }
+    .title{
+        font-size: 30px;
+    }
+    .text{
+        font-size: 20px;
+    }
+ }
