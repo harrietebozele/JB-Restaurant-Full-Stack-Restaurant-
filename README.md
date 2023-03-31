@@ -23,9 +23,9 @@ Then replace the vercel urls in the await axios line of codes in the api folder,
 In the nav bar at the top of the page, there is an admin component created for the administrators of the store who are in charge of overviewing orders, adding and deleting items in the product list, and changing the status of customers' orders. Cookies and TOKEN were used to provide authentication to the admin login page to verify the identity of the user. Only admins are permitted to login to this page. In order to be able to make use of the login functionality, implement the instructions below.
 
 ## Instructions: (Include the following variables in your .env file in the root of your project)
-MONGO_URL = mongodb+srv://restaurant:restaurant@fullstackrestaurant.1tyzr8x.mongodb.net/?retryWrites=true&w=majority
-ADMIN_USERNAME = admin
-ADMIN_PASSWORD = 123456
-TOKEN = SWdw4CV||663Z{p3|ZXtP%0k6Ejj;F
+MONGO_URL = mongodb+srv://restaurant:restaurant@fullstackrestaurant.1tyzr8x.mongodb.net/?retryWrites=true&w=majority <br />
+ADMIN_USERNAME = admin <br />
+ADMIN_PASSWORD = 123456 <br />
+TOKEN = SWdw4CV||663Z{p3|ZXtP%0k6Ejj;F <br />
 
 Then, log in using the admin username and admin password. Also, the .env file is necessary for the proper functioning of this application.
