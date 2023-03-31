@@ -9,7 +9,7 @@ const Admin = ({ orders, products }) =>{
 
     const handleDelete = async (id) =>{
         try{
-            const res = await axios.delete('http://localhost:3000/api/products/' + id);
+            const res = await axios.delete('https://jb-restaurant-full-stack-restaurant.vercel.app/api/products/' + id);
             setBurgerList(burgerList.filter((burger)=>burger._id !== id))
         } catch (err){
             console.log(err);
@@ -20,7 +20,7 @@ const Admin = ({ orders, products }) =>{
         const item = orderList.filter(order=>order._id===id)[0];
         const currStatus = item.status;
         try{
-           const res = await axios.put('http://localhost:3000/api/orders/' + id,{status:currStatus+1});
+           const res = await axios.put('https://jb-restaurant-full-stack-restaurant.vercel.app/api/orders/' + id,{status:currStatus+1});
            setOrderList([
             res.data,
             ...orderList.filter((order)=>order._id!==id),
@@ -108,8 +108,8 @@ export const getServerSideProps = async (ctx) =>{
             },
         };
     }
-    const productRes = await axios.get(`http://localhost:3000/api/products/`);
-    const orderRes = await axios.get("http://localhost:3000/api/orders/");
+    const productRes = await axios.get(`https://jb-restaurant-full-stack-restaurant.vercel.app/api/products/`);
+    const orderRes = await axios.get("https://jb-restaurant-full-stack-restaurant.vercel.app/api/orders/");
     return{
       props:{
         products: productRes.data,

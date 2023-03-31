@@ -10,7 +10,7 @@ const Login = () =>{
     
     const handleClick = async () =>{
         try{
-            await axios.post('http://localhost:3000/api/login',{username,password});
+            await axios.post('https://jb-restaurant-full-stack-restaurant.vercel.app/api/login',{username,password});
             router.push('/admin');
         } catch(err){
             setError(true);
