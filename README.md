@@ -1,7 +1,7 @@
 
 
 ## JB Full Stack Restaurant
-<img src = '/img/pngburger.png />
+<img src = 'public/img/pngburger.png' />
 
 First, run the development server:
 
