@@ -1,9 +1,12 @@
+# JB Full Stack Restaurant
+<img src = 'public/img/pngburger.png' width='300' />
 
+## This is a full stack restaurant where customers can choose an item, add to cart, make payment with the cash payment method or paypal, place their order, and track the status of their order.
 
-## JB Full Stack Restaurant
-<img src = 'public/img/pngburger.png' width={20} height={20} />
+# Directions to running this project
 
-First, run the development server:
+First, clone the repository into your system and run npm install to install the necessary dependencies needed to successfully run this application. 
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -13,27 +16,16 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then replace the vercel urls in the await axios line of codes in the api folder, cart.jsx file, as well as Admin folder with [http://localhost:3000] and open [http://localhost:3000](http://localhost:3000) with your browser to view the application .
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+# Roles and Authentication
+In the nav bar at the top of the page, there is an admin component created for the administrators of the store who are in charge of overviewing orders, adding and deleting items in the product list, and changing the status of customers' orders. Cookies and TOKEN were used to provide authentication to the admin login page to verify the identity of the user. Only admins are permitted to login to this page. In order to be able to make use of the login functionality, implement the instructions below.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+First, include the following variables in your .env file in the root of your project:
+MONGO_URL = mongodb+srv://restaurant:restaurant@fullstackrestaurant.1tyzr8x.mongodb.net/?retryWrites=true&w=majority
+ADMIN_USERNAME = admin
+ADMIN_PASSWORD = 123456
+TOKEN = SWdw4CV||663Z{p3|ZXtP%0k6Ejj;F
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Then, log in using the admin username and admin password. Also, the .env file is necessary for the proper functioning of this application.
